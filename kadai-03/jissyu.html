@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <ul id="students"></ul>
+        名前<input type="text" id="name">
+        得点<input type="text" id="score">
+        <button id="enter">入力</button>
+
+        <script>
+            const studentList = document.getElementById("students")
+            const nameInput = document.getElementById("name")
+            const scoreInput = document.getElementById("score")
+            const enter = document.getElementById("enter")
+
+            enter.addEventListener("click", () => {
+                const name = nameInput.value
+                const score = scoreInput.value
+ 
+                const studentItem = document.createElement("li")
+                studentItem.innerText = name + "さん " + score + "点"
+ 
+                studentList.appendChild(studentItem)
+            })
+        </script>
+    </body>
+</html>
